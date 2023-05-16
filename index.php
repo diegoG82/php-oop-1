@@ -1,56 +1,43 @@
-<?php
-// // Creo l'oggetto:
-// class movie {
-//     public $title;
-//     public $genre;
-//     public $year;
+<!DOCTYPE html>
+<html lang="en">
 
-//     // Creo il costrutto
-//     public function __construct($_title, $_genre, $_year){
-//         $this->title =$_title;
-//         $this->genre =$_genre;
-//         $this->year =$_year;
-//     }
-
-//     // Creo un metodo per stampare a video l'oggetto movie
-//     public function movieinfo(){
-//        echo "Title: "  . $this->title ."<br>";
-//        echo "Genre: "  . $this->genre ."<br>";
-//        echo "Year: "  . $this->year ."<br>";
-
-//     }
-
-// }
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <!-- CSS custom -->
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
 
 
-// Bonus 1: Modificare la classe Movie in modo che accetti piú di un genere.
 
-class movie
-{
-    public $title;
-    public $genres;
-    public $year;
 
-    // Creo il costrutto
-    public function __construct($_title, $_genres, $_year)
-    {
-        $this->title = $_title;
-        $this->genres = $_genres;
-        $this->year = $_year;
-    }
+<?php require_once './films_db.php' ?>
+<div class="ms_container mt-4 ">
 
-    // Creo un metodo per stampare a video l'oggetto movie
-    public function movieinfo()
-    {
-        echo "Title: "  . $this->title . "<br>";
-        echo "Genres: "  . implode(",",  $this->genres)  . "<br>";
-        echo "Year: "  . $this->year . "<br>";
-        echo "<br>";
-    }
-}
+    <h1 class="text-center text-warning mt-4">Best Movies in Town!!!</h1>
 
-$movie_1 = new movie("Avengers", ["Action",  "Superheroes"], 2012);
-$movie_2 = new movie("Tokyo Drift", ["Action",  "Driving"], 2006);
 
-$movie_1->movieinfo();
-$movie_2->movieinfo();
+    <div class="row">
+        <?php foreach ($movies as $movie) { ?>
+            <div class="col-sm-4">
+                <div class="card text-center  mt-4 mb-4">
+                    <h3><?php echo $movie->title; ?></h3>
+                    <img src="<?php echo $movie->image; ?>" alt="">
+                    <p class="mt-2">Genres: <?php echo implode(",", $movie->genres); ?></p>
+
+
+                    <p>Year: <?php echo $movie->year; ?> </p>
+                </div>
+            </div>
+        <?php } ?>
+    </div>
+
+
+</div>
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+.ms_container {
+  margin: 0 auto;
+  background-color: black;
+  border: 10px solid yellow;
+}
+
+.card {
+  width: 300px;
+  margin: 0 auto;
+  border: 5px solid yellow;
+}
+.card img {
+  height: 400px;
+}
