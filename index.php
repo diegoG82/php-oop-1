@@ -26,7 +26,7 @@
                 <div class="card text-center  mt-4 mb-4">
                     <h3><?php echo $movie->title; ?></h3>
                     <img src="<?php echo $movie->image; ?>" alt="">
-                    <p class="mt-2">Genres: <?php echo implode(",", $movie->genres); ?></p>
+                    <p>Genres: <?php echo implode(",", $movie->genres); ?></p>
                     <p>Year: <?php echo $movie->year; ?> </p>
                 </div>
             </div>

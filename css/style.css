@@ -2,13 +2,15 @@
   margin: 0 auto;
   background-color: black;
   border: 10px solid yellow;
+  width: 95%;
 }
 
 .card {
-  width: 300px;
+  width: 200px;
   margin: 0 auto;
   border: 5px solid yellow;
+ font-size: 0.8rem;
 }
 .card img {
-  height: 400px;
+  height: 250px;
 }
