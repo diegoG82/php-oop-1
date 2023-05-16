@@ -20,7 +20,6 @@
 
     <h1 class="text-center text-warning mt-4">Best Movies in Town!!!</h1>
 
-
     <div class="row">
         <?php foreach ($movies as $movie) { ?>
             <div class="col-sm-4">
@@ -28,14 +27,11 @@
                     <h3><?php echo $movie->title; ?></h3>
                     <img src="<?php echo $movie->image; ?>" alt="">
                     <p class="mt-2">Genres: <?php echo implode(",", $movie->genres); ?></p>
-
-
                     <p>Year: <?php echo $movie->year; ?> </p>
                 </div>
             </div>
         <?php } ?>
     </div>
-
 
 </div>
 </body>
