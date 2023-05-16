@@ -8,5 +8,5 @@ $movies = [
     new movie("Animatrix", "./img/animatrix.jpg",  ["Animation",  "Fantasy"], 2003,),
     new movie("G.I.T.S", "./img/ghostintheshell.jpg", ["Action",  "Cyberpunk"], 2017,),
     new movie("Gundam", "./img/gundam.jpg", ["Animation",  "Mecha"], 1979,),
-    new movie("Avatar", "./img/avatar.jpg",  ["Action",  "fantasy"], 2009,),
+    new movie("Avatar", "./img/avatar.jpg",  ["Action",  "Fantasy"], 2009,),
 ];
