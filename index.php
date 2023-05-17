@@ -16,6 +16,7 @@
 
 
 <?php require_once './films_db.php' ?>
+
 <div class="ms_container mt-4 ">
 
     <h1 class="text-center text-warning mt-4">Best Movies in Town!!!</h1>
@@ -26,7 +27,9 @@
                 <div class="card text-center  mt-4 mb-4">
                     <h3><?php echo $movie->title; ?></h3>
                     <img src="<?php echo $movie->image; ?>" alt="">
-                    <p>Genres: <?php echo implode(",", $movie->genres); ?></p>
+                    <p>Genres: <?php foreach ($movie->genres as $genre) { ?>
+                                <span class="badge bg-warning"><?php echo $genre; ?></span>
+                            <?php } ?></p>
                     <p>Year: <?php echo $movie->year; ?> </p>
                 </div>
             </div>

@@ -1,6 +1,7 @@
 <?php
 
-require_once './Models/Movie.php';
+    require_once __DIR__ . '/Models/Movie.php';
+require_once __DIR__ . '/Models/genres.php';
 
 $movies = [
     new movie("Avengers", "./img/avengers.jpg", ["Action",  "Superhero"], 2012,),
